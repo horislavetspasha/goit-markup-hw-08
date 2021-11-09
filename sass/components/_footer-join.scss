@@ -1,0 +1,50 @@
+.footer-join {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+
+    @media screen and (min-width: 1200px) {
+      justify-content: start;
+    }
+  }
+
+  &__item + &__item {
+    margin-left: 10px;
+  }
+
+  &__social-link {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms var(--main-timing);
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+
+  &__social-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--secondary-text-color);
+  }
+}

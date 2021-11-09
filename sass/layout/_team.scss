@@ -1,0 +1,114 @@
+.team {
+  background-color: var(--secondary-background-color);
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    color: var(--primary-title-color);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      line-height: 1.17;
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    padding-bottom: 24px;
+
+    .team__list &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .team__list & {
+        width: calc((100% - 30px) / 2);
+        margin: 0 30px 30px 0;
+      }
+      .team__list &:nth-child(2n) {
+        margin-right: 0;
+      }
+      .team__list &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 30px;
+      .team__list &:not(:last-child) {
+        margin: 0 30px 0 0;
+      }
+    }
+
+    &-title {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.19;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: var(--primary-title-color);
+    }
+
+    &-text {
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 1.19;
+      text-align: center;
+    }
+  }
+}
+
+.team__social {
+  &-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-item + &-item {
+    margin-left: 10px;
+  }
+
+  &-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms var(--main-timing);
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-color);
+    transition: fill 250ms var(--main-timing);
+
+    .team__social-link:hover &,
+    .team__social-link:focus & {
+      fill: #ffffff;
+    }
+  }
+}

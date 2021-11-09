@@ -1,0 +1,17 @@
+.footer-address {
+  font-style: normal;
+  &__text {
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--secondary-text-color);
+
+    @media screen and (min-width: 1200px) {
+      margin: 0 0 9px 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}
