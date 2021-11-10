@@ -227,7 +227,7 @@ img {
   font-size: 26px;
   line-height: calc(40 / 34);
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  color: var(--accent-color);
   margin-bottom: 32px;
   transition: color 250ms var(--main-timing);
 }
@@ -307,13 +307,6 @@ img {
   line-height: 1.17;
 }
 
-@media screen and (max-width: 767px) {
-  .logo {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-}
-
 .logo_color_accent {
   color: #2196f3;
 }
@@ -331,14 +324,14 @@ img {
 }
 
 .logo_color_white {
-  display: flex;
+  display: block;
   margin-bottom: 20px;
   color: var(--secondary-text-color);
 }
 
 @media screen and (min-width: 1200px) {
   .logo_color_white {
-    justify-content: start;
+    text-align: left;
   }
 }
 
@@ -505,15 +498,8 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .hero {
-    max-width: 480px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-bg-tablet.jpg");
   }
 }
@@ -746,7 +732,6 @@ img {
   background-color: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  padding-bottom: 24px;
 }
 
 .team__list .team__item:not(:last-child) {
@@ -767,16 +752,18 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .team__item {
-    padding-bottom: 30px;
-  }
   .team__list .team__item:not(:last-child) {
     margin: 0 30px 0 0;
   }
 }
 
+@media screen and (min-width: 468px) {
+  .team__item-box {
+    padding: 30px 0;
+  }
+}
+
 .team__item-title {
-  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -930,7 +917,7 @@ img {
 @media screen and (min-width: 768px) {
   .footer__container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: baseline;
   }
@@ -943,14 +930,7 @@ img {
 }
 
 .footer__contacts {
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 768px) {
-  .footer__contacts {
-    width: 232px;
-    margin: 0 165px 60px 0;
-  }
+  text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -978,7 +958,14 @@ img {
 }
 
 .footer-address {
+  text-align: center;
   font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-address {
+    margin-bottom: 60px;
+  }
 }
 
 .footer-address__text {
@@ -1001,7 +988,7 @@ img {
 }
 
 .footer-join {
-  margin-bottom: 60px;
+  text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1021,11 +1008,13 @@ img {
 
 .footer-join__list {
   display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 1200px) {
   .footer-join__list {
-    justify-content: start;
+    justify-content: left;
   }
 }
 

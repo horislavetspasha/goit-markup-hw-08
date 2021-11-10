@@ -1,5 +1,5 @@
 .footer-join {
-  margin-bottom: 60px;
+  text-align: center;
 
   @media screen and (min-width: 1200px) {
     text-align: left;
@@ -16,9 +16,11 @@
 
   &__list {
     display: flex;
+    text-align: center;
+    justify-content: center;
 
     @media screen and (min-width: 1200px) {
-      justify-content: start;
+      justify-content: left;
     }
   }
 
