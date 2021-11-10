@@ -1,6 +1,10 @@
 .footer-join {
   text-align: center;
 
+  @media screen and (min-width: 468px) {
+    margin-bottom: 60px;
+  }
+
   @media screen and (min-width: 1200px) {
     text-align: left;
   }

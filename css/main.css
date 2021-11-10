@@ -962,6 +962,12 @@ img {
   font-style: normal;
 }
 
+@media screen and (min-width: 468px) {
+  .footer-address {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .footer-address {
     margin-bottom: 60px;
@@ -989,6 +995,12 @@ img {
 
 .footer-join {
   text-align: center;
+}
+
+@media screen and (min-width: 468px) {
+  .footer-join {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
